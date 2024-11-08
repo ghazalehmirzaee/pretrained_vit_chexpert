@@ -1,0 +1,75 @@
+{
+    "diseases": [
+        {
+            "name": "No Finding",
+            "index": 0,
+            "competition_task": false
+        },
+        {
+            "name": "Enlarged Cardiomediastinum",
+            "index": 1,
+            "competition_task": false
+        },
+        {
+            "name": "Cardiomegaly",
+            "index": 2,
+            "competition_task": true
+        },
+        {
+            "name": "Lung Opacity",
+            "index": 3,
+            "competition_task": false
+        },
+        {
+            "name": "Lung Lesion",
+            "index": 4,
+            "competition_task": false
+        },
+        {
+            "name": "Edema",
+            "index": 5,
+            "competition_task": true
+        },
+        {
+            "name": "Consolidation",
+            "index": 6,
+            "competition_task": true
+        },
+        {
+            "name": "Pneumonia",
+            "index": 7,
+            "competition_task": false
+        },
+        {
+            "name": "Atelectasis",
+            "index": 8,
+            "competition_task": true
+        },
+        {
+            "name": "Pneumothorax",
+            "index": 9,
+            "competition_task": false
+        },
+        {
+            "name": "Pleural Effusion",
+            "index": 10,
+            "competition_task": true
+        },
+        {
+            "name": "Pleural Other",
+            "index": 11,
+            "competition_task": false
+        },
+        {
+            "name": "Fracture",
+            "index": 12,
+            "competition_task": false
+        },
+        {
+            "name": "Support Devices",
+            "index": 13,
+            "competition_task": false
+        }
+    ]
+}
+

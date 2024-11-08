@@ -1,0 +1,64 @@
+# CheXpert Configuration
+data:
+  train_dir: "/path/to/CheXpert-v1.0/train"
+  val_dir: "/path/to/CheXpert-v1.0/valid"
+  train_csv: "/path/to/CheXpert-v1.0/train.csv"
+  valid_csv: "/path/to/CheXpert-v1.0/valid.csv"
+  image_size: 320
+  batch_size: 16
+  num_workers: 4
+  uncertainty_strategy: "U-MultiClass"  # Options: U-Ignore, U-Zeros, U-Ones, U-MultiClass, U-SelfTrained
+
+model:
+  name: "vit_base_16"
+  pretrained_path: "./vit-b_CXR_0.5M_mae.pth"
+  img_size: 320
+  patch_size: 16
+  in_chans: 3
+  num_classes: 14
+  embed_dim: 768
+  depth: 12
+  num_heads: 12
+  mlp_ratio: 4.0
+  drop_rate: 0.1
+
+training:
+  epochs: 50
+  learning_rate: 1.0e-4
+  weight_decay: 1.0e-5
+  warmup_epochs: 3
+  eval_freq: 1
+  save_freq: 5
+  early_stopping_patience: 10
+  max_grad_norm: 1.0
+
+optimizer:
+  name: "adamw"
+  beta1: 0.9
+  beta2: 0.999
+  eps: 1.0e-8
+
+paths:
+  save_dir: "checkpoints"
+  log_dir: "logs"
+
+wandb:
+  project: "chexpert-classification"
+  name: "vit-uncertainty"
+  entity: "your-username"
+
+disease_classes:
+  - "No Finding"
+  - "Enlarged Cardiomediastinum"
+  - "Cardiomegaly"
+  - "Lung Opacity"
+  - "Lung Lesion"
+  - "Edema"
+  - "Consolidation"
+  - "Pneumonia"
+  - "Atelectasis"
+  - "Pneumothorax"
+  - "Pleural Effusion"
+  - "Pleural Other"
+  - "Fracture"
+  - "Support Devices"
