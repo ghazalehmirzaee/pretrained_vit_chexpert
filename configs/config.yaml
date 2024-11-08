@@ -1,9 +1,9 @@
 # CheXpert Configuration
 data:
-  train_dir: "/path/to/CheXpert-v1.0/train"
-  val_dir: "/path/to/CheXpert-v1.0/valid"
-  train_csv: "/path/to/CheXpert-v1.0/train.csv"
-  valid_csv: "/path/to/CheXpert-v1.0/valid.csv"
+  train_dir: "/NewRaidData/ghazal/data/chexpert/train"
+  val_dir: "/NewRaidData/ghazal/data/chexpert/valid"
+  train_csv: "/NewRaidData/ghazal/data/chexpert/train.csv"
+  valid_csv: "/NewRaidData/ghazal/data/chexpert/valid.csv"
   image_size: 320
   batch_size: 16
   num_workers: 4
